@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='../css/style.css' />
+  <title>Document</title>
+</head>
+<body>
+  <ul class="navbox nav">
+    <li><a href="home">Home</a></li>
+    <li><a href="messages">Messages</a></li>
+  </ul>
+  
+  <div class="box">
+    <h1>Meg's Bulletin Board</h1>
+    <h3>Messages</h3>
+  </div>
+  <div class="box" id="show">
+  <ul>
+    <% for (var i =0; i<data.length; i++) {%>
+      <li><a href=<%="messages/" + data[i].id%>><%= data[i].title %></a></li>
+    <% } %>
+    </ul>
+
+
+</body>
+</html>
