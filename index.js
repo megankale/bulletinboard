@@ -13,7 +13,9 @@ app.set('views','./views');
 
 app.use(express.static(__dirname + '/public'));
 
-// app.get('/', function(req, res){
+app.get('/', function(req, res){
+  res.redirect('/home');
+})
 
 app.get('/home', function(req, res){
   pg.connect('postgres://localhost:5432/bulletin_board', function(err, client, done){
